@@ -1,0 +1,405 @@
+*{
+    box-sizing: border-box; /* придание всем элементам одинаковых */
+    margin: 0;   /* обнуляем зазоры по умолчаниию */
+    padding: 0;
+}
+/* @font-face {
+    font-family: 'Roboto Black';
+    src: url('../fonts/Roboto-Black.eot');
+    src: url('../fonts/Roboto-Black.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/Roboto-Black.woff') format('woff'),
+    url('../fonts/Roboto-Black.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    } */
+
+
+html {
+    font-family: Roboto;
+}
+
+.container {    /* создание контейнера ограниченного сеткой */
+    width: 1140px; /* ширина сетки - из макета */
+    margin: 0 auto; /* центрируем */
+    position: relative;  /* для управления положением элементов */
+}
+
+.promo {
+    height: 800px; /* первый элемент высота из макета, ширну не задаем, что бы она адаптировалась в завсимости от ширины экрана */
+    background: url('../img/bg/main_bg.jpg') center center/cover no-repeat; /* размещение картинки, выравнивание, расягивание, без повторов */
+    padding-top: 30px;  /* задание верхнего отсупа для сеции */
+    padding-bottom: 50px; /* задание нижнего отсупа для сеции */
+}
+
+.logo_img {
+    display: block;  /* присвоение блока для картинки, которая строчная изначально */
+    width: 83px; 
+    height: 71px;
+    margin: 0 auto; /* центрируем */
+}
+
+.logo_text {
+  
+    text-transform: uppercase; 
+    color: white;
+    font-family: roboto;
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 24px;
+    text-align: center; /* центрируем */
+    margin-top: 14px;
+}
+
+h1 {
+    margin-top: 53px;
+}
+
+.title {  /* проверить по видео */
+    text-transform: uppercase;
+    font-size: 41px;
+  /*   line-height: 24px; */  /* этот параметр задает высоту строки, что может вызвать "наползание строк друг на друга" используем если строк несколько, копируется из программы для работыы с макетом */ 
+    font-weight: 900;
+    color: #f9bf3b;
+    text-align: center;
+    
+}
+
+.simple .title_big {
+    /* font-family: 'Roboto Black'; */
+    font-size: 80px;
+    /* line-height: 24px; */
+    font-weight: 900;
+    text-transform: uppercase;
+    color: #ffffff;
+    text-align: center;
+    margin-top: 21px;
+}
+
+h2.title {
+    margin-top: 30px;
+}
+
+.promo_text {
+    font-family: Roboto;
+    font-size: 21px;
+    line-height: 28px;
+    font-weight: 300;
+    color: #ffffff;
+    text-align: center;
+    margin-top: 23px;
+}
+
+span {
+    font-weight: 700;
+    color: #f9bf3b;
+}
+
+.promo_btn {
+    display: block;
+    margin: 0 auto;
+    margin-top: 73px;
+    width: 313px; 
+    height: 72px; 
+    background-color: #2798b9;
+    box-shadow: inset 0 -5px rgba(0, 0, 0, 0.23);
+    /* font-family: 'Roboto Condensed'; */
+    font-size: 23px;
+    line-height: 24px;
+    font-weight: 400;
+    text-transform: uppercase;
+    text-shadow: -1px -1px 0px rgba(0,0,0,0.21);
+    color: #ffffff;
+    cursor:pointer;                                                                                                                                                                                   
+}
+
+.more {
+    margin-top: 50px;
+}
+
+.more_text {
+    font-family: Roboto;
+    font-size: 15px;
+  /*   line-height: 24px; */ /*  не нужно */
+    font-weight: 100;
+    text-transform: uppercase;
+    color: #ffffff;   
+    text-align: center; /* быстрый набор - tac */
+}
+
+.more_img {
+    display: block; /*  присваиваем свойство блока */
+    margin: 0 auto;
+    margin-top: 13px; /* быстрый набор mt13 */
+
+}
+
+.waiting {  /* свойства секции */
+    
+    height: 604px; /* указываем только высоту, без ширины, чтоб страница адаптировалась под ширину экрана */
+    background-color: #efefef;
+    padding: 85px 0 75px 0;/*  отступы верх (85) и низ (75) */
+}
+
+
+.waiting .waiting_header {  /* свойства первого зоголовка */
+    font-family: Roboto;
+    font-size: 30px;
+    line-height: 12px;
+    font-weight: 400;
+    text-transform: uppercase;
+    color: #252525;
+    text-align: center;
+    /* margin-top: 73px; не нужен, тк прописали в свойствах секции */
+}
+
+.waiting_divider { /* полоска между заголовками
+ */
+    width: 217px;
+    height: 4px;
+    background-color: #f9bf3b;
+    margin: 0 auto;
+    margin-top: 25px;
+}
+
+.waiting_subheader {  /* второй заголовок */
+    margin-top: 10px;
+    font-family: Roboto;
+    font-size: 23px;
+    font-weight: 400;
+    color: #4a4a4a;
+    text-align: center;
+}
+
+.waiting_wrapper {
+    margin-top: 45px;  /* отступ от верха для блока с элементами */
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.waiting_item {
+   /*  display: inline-block; */ /*  выстраивание блоков в линейку, если это не флекс */
+   /*  vertical-align: top; */  /* выравнивание элементов по верху,  если это не флекс */
+    width: 342px; /* задаем только ширину на случай изменение содержания */
+    text-align: center;  /* выравнивание текста для всех элементов обертки */
+}
+
+
+.waiting_img {
+
+    width: 100%;  /* - сохраниение ширины при замене картинок относительно изначальной */
+}
+
+.waiting_descr { /* стилизация описаний */
+
+    margin-top: 33px;
+    font-family: Roboto;
+    font-size: 15px;
+    font-weight: 300;
+    color: #4a4a4a;
+}
+
+.optimization {
+     margin: 100px 0 100px 0;
+     min-height: 500px;
+
+}
+
+h3 {
+    font-family: Roboto;
+    font-size: 30px;
+    font-weight: 900;
+    text-transform: uppercase;
+    color: #299cbd;
+    text-align: center;
+    margin-left: 391px;
+}
+
+.opt-text-im {
+    color: black;
+    font-weight: 700;
+
+}
+
+.opt-text {
+
+    margin-left: 391px;
+    font-family: Roboto;
+    font-size: 17px;
+    line-height: 27px;
+    font-weight: 300;
+    color: #4a4a4a;
+}
+
+.opt-img {
+
+    position: absolute; /* - изменение статуса относительно релатив контейнера */
+    top: -54px;/*  смещенеи от верха для расположения в нужном месте */
+    left: -240px; /*  смещенеи слева для расположения в нужном месте */
+    z-index: -1;
+}
+
+h4 {
+    font-family: Roboto;
+    font-size: 30px;
+    line-height: 12px;
+    font-weight: 400;
+    text-transform: uppercase;
+    color: #efefef; 
+}
+
+.finish {
+
+    min-height: 447px;
+    padding: 86px 0 79px 0;
+    background: url(/img/bg/second_bg.jpg) center center/cover no-repeat;
+    text-align: center;
+}
+
+.finish-img {
+    
+    width: 60px;
+    height: 54px;
+}
+
+.finish-descr {
+    font-family: Roboto;
+    font-size: 17px;
+    line-height: 20px;
+    font-weight: 300;
+    color: #efefef;
+    margin-top: 20px;
+    text-align: center;
+
+}
+
+.finish-wrapper {
+
+    display: flex;
+    justify-content: space-between;
+    margin-top: 50px;
+}
+
+.finish-item {  /* исаправить ситуацию с текстом */
+    
+    width: 204px;
+    
+}
+.finish-round {
+
+display: flex;
+justify-content: center;
+align-items: center;
+margin: 0 auto;
+width: 115px;
+height: 115px;
+background-color: #b4e2ff;
+border-radius: 100%;
+}
+
+.present {
+    height: 628px;
+    background-color: #efefef;
+}
+
+.present-img {
+   
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+   
+}
+
+.present-text {
+    font-family: Roboto;
+    font-size: 30px;
+    line-height: 43px;
+    font-weight: 400;
+    color: #252525;
+    text-align: center;
+    margin-top: 42px;
+}
+
+
+
+.webinar-img {
+    
+    width: 252px;
+    height: 154px;
+    margin: 0 auto;
+    margin-top: 79px;
+}
+
+.first-web {
+    font-family: Roboto;
+    font-size: 30px;
+    line-height: 12px;
+    font-weight: 400;
+    text-transform: uppercase;
+    color: #252525;
+    text-align: center;
+    margin-top: 77px;
+}
+
+.date-text {
+
+    font-family: Roboto;
+    font-size: 36px;
+    line-height: 12px;
+    font-weight: 900;
+    text-transform: uppercase;
+    color: #299cbd;
+    text-align: center;
+    margin-top: 50px;
+}
+
+.rush {
+    font-family: Roboto;
+    font-size: 23px;
+    line-height: 20px;
+    font-weight: 400;
+    color: #4a4a4a;
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 46px;
+}
+
+.footer {
+    
+    height: 166px;
+    background-color: #1a1a1a;
+    
+}
+
+.footer-wrapper {
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+a {
+    font-family: Roboto;
+    font-size: 15px;
+    line-height: 21px;
+    font-weight: 300;
+    text-decoration: underline;
+    color: #888888;
+}
+
+.item-footer {
+    margin-top: 61px;
+}
+
+.footer-text {
+    font-family: Roboto;
+    font-size: 15px;
+    line-height: 21px;
+    font-weight: 300;
+    color: #888888;
+    
+}
+
+.call {
+    text-align: center;
+}
+
